@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.local
+*.json.bak
+service-account*.json
+healthiervietinbank-service-account*.json
+.vercel/
