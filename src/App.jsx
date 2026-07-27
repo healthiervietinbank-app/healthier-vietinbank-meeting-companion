@@ -39,7 +39,6 @@ function Login({onLogin}) {
     const knownNames={"minhanh.n":"Nguyễn Minh Anh","admin.vtb":"Quản trị viên"};
     onLogin({name:form.name||knownNames[form.userAD]||form.userAD,userAD:form.userAD,role:form.userAD==="admin.vtb"?"Admin":form.role,isAdmin:form.userAD==="admin.vtb"});
   };
-  const demo=(admin=false)=>onLogin(admin?{name:"Quản trị viên",userAD:"admin.vtb",role:"Admin",isAdmin:true}:{name:"Nguyễn Minh Anh",userAD:"minhanh.n",role:"Trưởng phòng",isAdmin:false});
   return <div className="auth-page">
     <section className="auth-story">
       <Brand/>
@@ -63,7 +62,6 @@ function Login({onLogin}) {
         <button className="primary wide">{mode==="login"?"Đăng nhập":"Tạo tài khoản"}<ArrowRight/></button>
       </form>
       <button className="text-btn">Quên mã PIN?</button>
-      <div className="demo-box"><b>Dùng nhanh bản mẫu</b><span>Dữ liệu giả, không kết nối hệ thống ngân hàng.</span><div><button onClick={()=>demo(false)}>Vào vai người dùng</button><button onClick={()=>demo(true)}>Vào vai Admin</button></div></div>
       <p className="help">Cần hỗ trợ PIN? Liên hệ <b>healthiervtb@vietinbank.vn</b></p>
     </div></main>
   </div>
